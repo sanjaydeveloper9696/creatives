@@ -1,0 +1,182 @@
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .pricing-btn {
+    margin: 10px 0;
+  }
+
+  .search {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo span {
+    font-size: 20px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .pricing-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .search input {
+    width: 100px;
+  }
+
+
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+  .viedeo-b {
+    margin-top: 35px;
+
+  }
+
+
+  .steps {
+    display: grid !important;
+  }
+
+
+  .d-flex {
+    display: grid !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+  .Experiences {
+    font-size: 25px !important;
+    font-weight: 900;
+    line-height: 27px !important;
+  }
+
+  .speace {
+    font-size: 25px !important;
+    font-weight: 900;
+    text-align: center;
+  }
+
+  .Content-Banner {
+    padding: 0% 0% !important;
+    font-size: 18px;
+    line-height: 23px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+
+  .d-flex2 {
+    display: grid !important;
+    align-items: center;
+    margin: 0 auto !important;
+    width: 60%;
+    gap: 34px;
+  }
+
+  .blog-posts{
+
+    display: grid !important;
+  }
+  .post{
+width: 100% !important;
+  }
+
+
+
+  .container {
+    width: 100% !important;}
+
+
+
+
+
+
+
+
+
+    .d-flex3 {
+      background-color: #131313;
+      color: White;
+      display: grid !important;
+      justify-content: space-around;
+      /* align-items: center; */
+      margin: 0 auto;
+      padding: 5%;
+    }
+
+
+
+
+
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr) !important;
+  gap: 20px;
+  padding: 0px !important;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
