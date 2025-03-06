@@ -1,63 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <style>
-        .d-flex {
-            display: flex;
-            background-color: white;
-            border-bottom: 1px solid black;
-
-            justify-content: center;
-            align-items: center;
-            column-gap: 10%;
-        }
-
-        .d-flex1 {
-            display: flex;
-        }
-
-        .logo {
-            width: 100px;
-        }
-    </style>
-
-
-
-
-
-
-
-
-
-
-
+    <title>About us</title>
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
-
 <body>
-    <header class="d-flex">
+    
+    <section class="top-nav">
         <div class="">
-            <img src="/images/amazon.png" class="logo" alt="">
+            <!-- <H2>NARRATIVE</H2> -->
+            <img src="/images/logo.png" class="logo" alt="">
         </div>
-
-        <nav>
-            <ul class="d-flex1">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="projects.html">Project</a></li>
-                <li><a href="blogs.html">Blogs</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-        <div>
-            <button>Request A Quote</button>
-        </div>
-
-    </header>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li class="">Home</li>
+            <li>About Us</li>
+            <li>Project</li>
+            <li>Blog</li>
+            <li>Contact Us </li>
+        </ul>
+        <button class="btn">Our Pricing Plan </button>
+    </section>
 </body>
-
 </html>
