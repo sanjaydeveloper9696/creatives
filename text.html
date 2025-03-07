@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Column Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        .display-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            background-color: #f9f9f9;
+        }
+        .col-12-md-6 {
+            width: 50%;
+            padding: 20px;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.5;
+        }
+        .btn1 {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+        .btn1:hover {
+            background-color: #0056b3;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        @media (max-width: 768px) {
+            .col-12-md-6 {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="display-flex">
+        <div class="col-12-md-6">
+            <h2>Not just your regular <br> design agency</h2>
+            <p>What is the purpose of the Two-Column Image-Text Module? This module provides two columns view,
+                having content on the left, the image on the right, CTA, or Link on the bottom. If desired</p>
+            <button class="btn1">Contact Us</button>
+        </div>
+        <div class="col-12-md-6">
+            <img src="images/design1.jpg" alt="Design Image">
+        </div>
+    </div>
+</body>
+</html>

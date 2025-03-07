@@ -131,13 +131,6 @@ width: 100% !important;
     width: 100% !important;}
 
 
-
-
-
-
-
-
-
     .d-flex3 {
       background-color: #131313;
       color: White;
@@ -149,34 +142,26 @@ width: 100% !important;
     }
 
 
-
-
-
-
-
 .gallery {
   display: grid;
   grid-template-columns: repeat(1, 1fr) !important;
   gap: 20px;
   padding: 0px !important;
+}
 
 
+.container-width {
+  margin:auto;
+  width:auto;
+}
 
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 768px) {
+  .display-flex {
+    display: grid
+;
+flex-direction: column;
+}
 }
