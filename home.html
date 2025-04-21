@@ -3,117 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+  <link rel="stylesheet" href="css/stylee.css">
   <title>Responsive Header</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-    }
-
-    header {
-      background-color: #fff;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo img {
-      height: 40px;
-      margin-right: 10px;
-    }
-
-    .logo span {
-      font-size: 24px;
-      font-weight: bold;
-      color: #007BFF;
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #007BFF;
-    }
-
-    .login-btn {
-      padding: 8px 16px;
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .login-btn:hover {
-      background-color: #0056b3;
-    }
-
-    .menu-icon {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .menu-icon div {
-      width: 25px;
-      height: 3px;
-      background-color: #333;
-      margin: 4px 0;
-    }
-
-    .mobile-nav {
-      display: none;
-      flex-direction: column;
-      padding: 10px 20px;
-      background-color: #fff;
-      border-top: 1px solid #ddd;
-    }
-
-    .mobile-nav a,
-    .mobile-nav button {
-      margin: 10px 0;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-      }
-
-      .menu-icon {
-        display: flex;
-      }
-
-      .mobile-nav.active {
-        display: flex;
-      }
-    }
+   
   </style>
 </head>
 <body>
@@ -121,7 +16,7 @@
 <header>
   <div class="container">
     <div class="logo">
-      <img src="https://via.placeholder.com/40" alt="Logo">
+      <img src="images/logo.png" alt="Logo">
       <span>MyWebsite</span>
     </div>
 
@@ -148,6 +43,44 @@
     <button class="login-btn">Login</button>
   </div>
 </header>
+
+
+
+
+
+
+<section>
+    <video class="bg-video__media" autoplay loop muted playsinline>
+        <source src="images/vodeo.mp4" type="video/mp4">
+        <!-- <source src="images/video.webm" type="video/webm"> -->
+      </video>
+    
+      <!-- Overlay layer -->
+      <div class="bg-video__overlay"></div>
+    
+      <!-- Foreground content -->
+      <div class="bg-video__content">
+        <h1>We Are Creative Digital Agency</h1>
+        <p>We Are Big Digital Agency</p>
+        <button id="toggle-video">Pause Video</button>
+      </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script>
   function toggleMenu() {
