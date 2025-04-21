@@ -35,6 +35,12 @@ body {
 
 
 
+.top-nav-main {
+    background: white !important;
+    position: relative;
+    z-index: 10;
+}
+
 .top-nav {
     display: flex;
     align-items: center;
@@ -42,8 +48,7 @@ body {
     background: white;
     color: #000;
     padding: 4px 30px;
-    position: relative;
-    z-index: 10;
+
 }
 
 .logo {
@@ -124,6 +129,18 @@ body {
     display: none;
 }
 
+
+
+
+button:hover {
+    background: linear-gradient(to left, #ffaf3f, #ff416c);
+}
+
+
+
+
+
+
 @media (max-width: 768px) {
     .menu-button-container {
         display: flex;
@@ -158,8 +175,6 @@ body {
 
 
 
-
-
 /*======================================================================= header code ================================================================== */
 
 
@@ -167,40 +182,74 @@ body {
 
 
 
-.video-background {
+
+.bg-video {
     position: relative;
-    height: 80vh;
-    z-index: -99;
+    width: 100%;
+    height: 100vh;
     overflow: hidden;
-}
-
-
-.content {
-
+  }
+  
+  .bg-video__media {
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .bg-video__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5; /* adjust as needed */
+    z-index: 2;
+  }
+  
+  .bg-video__content {
+    position: relative;
+    z-index: 3;
+    color: white;
+    text-align: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    z-index: 1;
+    position: absolute;
+  }
+
+  
+.bg-video__content h1 {
+
+    font-size: 44px ;
+    font-weight: 800;
+
 }
 
-#toggle-video {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    background: #ff6600;
-    color: white;
-    border-radius: 5px;
+.bg-video__content p {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.bg-video__content #toggle-video {
     margin-top: 20px;
-    transition: background 0.3s;
+    padding: 10px 20px;
+    background-color: #480fe9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
 }
 
-button:hover {
-    background: linear-gradient(to left, #ffaf3f, #ff416c);
-}
+#
+
 
 
 
@@ -344,10 +393,6 @@ span {
 
 
 
-
-
-
-
 .display-flex {
     display: flex;
 
@@ -433,11 +478,6 @@ img {
     opacity: 1;
 }
 
-h1 {
-    text-align: center;
-    margin: 20px 0;
-    color: #333;
-}
 
 
 

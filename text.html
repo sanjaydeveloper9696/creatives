@@ -2,93 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Responsive Searchable Table</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <style>
-    body {
-      background-color: #f8f9fa;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    .table-container {
-      margin: 40px auto;
-      max-width: 95%;
-      background-color: white;
-      border-radius: 15px;
-      padding: 25px;
-      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
-    }
-    thead {
-      background-color: #007bff;
-      color: white;
-    }
-    tbody tr:nth-child(even) {
-      background-color: #f3f3f3;
-    }
-    tbody tr:hover {
-      background-color: #e1f5fe;
-    }
-    .badge {
-      font-size: 0.9em;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Header</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100">
 
-<div class="table-container">
-  <h2 class="text-center mb-4">Employee Directory</h2>
+  <!-- Header -->
+  <header class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <img src="https://via.placeholder.com/40" alt="Logo" class="h-10 w-10 mr-2">
+          <span class="font-bold text-xl text-blue-600">MyWebsite</span>
+        </div>
 
-  <input type="text" id="searchInput" class="form-control mb-4" placeholder="🔍 Search by Name or Department...">
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex space-x-6 items-center">
+          <a href="#" class="text-gray-700 hover:text-blue-600">Home</a>
+          <a href="#" class="text-gray-700 hover:text-blue-600">About</a>
+          <a href="#" class="text-gray-700 hover:text-blue-600">Services</a>
+          <a href="#" class="text-gray-700 hover:text-blue-600">Contact</a>
+          <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Login</button>
+        </nav>
 
-  <div class="table-responsive">
-    <table class="table table-bordered table-hover" id="dataTable">
-      <thead>
-        <tr>
-          <th>SR No </th>
-          <th>Name</th>
-          <th>Department</th>
-          <th>Email</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- 50 Manual Rows Below -->
-        <tr><td>1</td><td>Sumit Sharma</td><td>Development</td><td>sumit1@company.com</td><td><span class="badge bg-success">Active</span></td></tr>
-        <tr><td>2</td><td>Sachin Jain</td><td>HR</td><td>sachin2@company.com</td><td><span class="badge bg-secondary">Inactive</span></td></tr>
-        <tr><td>3</td><td>Rahul Singh</td><td>Marketing</td><td>rahul3@company.com</td><td><span class="badge bg-success">Active</span></td></tr>
-        <tr><td>4</td><td>Ravi Kumar</td><td>Sales</td><td>ravi4@company.com</td><td><span class="badge bg-success">Active</span></td></tr>
-        <tr><td>5</td><td>Amit Verma</td><td>Support</td><td>amit5@company.com</td><td><span class="badge bg-secondary">Inactive</span></td></tr>
-        <tr><td>6</td><td>Ankit Mishra</td><td>Development</td><td>ankit6@company.com</td><td><span class="badge bg-success">Active</span></td></tr>
-        <tr><td>7</td><td>Priya Soni</td><td>HR</td><td>priya7@company.com</td><td><span class="badge bg-secondary">Inactive</span></td></tr>
-        <tr><td>8</td><td>Kunal Yadav</td><td>Marketing</td><td>kunal8@company.com</td><td><span class="badge bg-success">Active</span></td></tr>
-        <tr><td>9</td><td>Deepak Rawat</td><td>Support</td><td>deepak9@company.com</td><td><span class="badge bg-success">Active</span></td></tr>
-        <tr><td>10</td><td>Sneha Mehta</td><td>Development</td><td>sneha10@company.com</td><td><span class="badge bg-secondary">Inactive</span></td></tr>
-        <!-- Copy-Paste pattern continues till 50 -->
-        <tr><td>11</td><td>Aditya Rana</td><td>HR</td><td>aditya11@company.com</td><td><span class="badge bg-success">Active</span></td></tr>
-        <tr><td>12</td><td>Neha Joshi</td><td>Marketing</td><td>neha12@company.com</td><td><span class="badge bg-secondary">Inactive</span></td></tr>
-        <tr><td>13</td><td>Ashish Chauhan</td><td>Sales</td><td>ashish13@company.com</td><td><span class="badge bg-success">Active</span></td></tr>
-        <tr><td>14</td><td>Preeti Sharma</td><td>Support</td><td>preeti14@company.com</td><td><span class="badge bg-secondary">Inactive</span></td></tr>
-        <tr><td>15</td><td>Manish Rawal</td><td>Development</td><td>manish15@company.com</td><td><span class="badge bg-success">Active</span></td></tr>
-        <!-- Continue till -->
-        <tr><td>50</td><td>Komal Thakur</td><td>HR</td><td>komal50@company.com</td><td><span class="badge bg-success">Active</span></td></tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menuToggle" class="text-gray-700 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
 
-<script>
-  const searchInput = document.getElementById("searchInput");
-  const table = document.getElementById("dataTable");
-  const rows = table.getElementsByTagName("tr");
+    <!-- Mobile Nav -->
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+      <a href="#" class="block text-gray-700 py-2 hover:text-blue-600">Home</a>
+      <a href="#" class="block text-gray-700 py-2 hover:text-blue-600">About</a>
+      <a href="#" class="block text-gray-700 py-2 hover:text-blue-600">Services</a>
+      <a href="#" class="block text-gray-700 py-2 hover:text-blue-600">Contact</a>
+      <button class="w-full mt-2 bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Login</button>
+    </div>
+  </header>
 
-  searchInput.addEventListener("keyup", function () {
-    const filter = searchInput.value.toLowerCase();
-    for (let i = 1; i < rows.length; i++) {
-      const rowText = rows[i].textContent.toLowerCase();
-      rows[i].style.display = rowText.includes(filter) ? "" : "none";
-    }
-  });
-</script>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
