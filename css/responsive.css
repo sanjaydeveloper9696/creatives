@@ -59,6 +59,62 @@ width: auto !important;
   .top-nav {
     padding: 0px 15px !important;}
 
+
+
+
+    .bg-video__content {
+      position: relative;
+      z-index: 3;
+      color: white;
+      text-align: center;
+      top: 16%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+  }
+  
+  
+  .bg-video__media {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 26%;
+      object-fit: cover;
+      z-index: 1;
+  }
+  
+  
+  .bg-video__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 26%;
+      background: #000;
+      opacity: 0.5;
+      z-index: 2;
+  }
+  
+  .bg-video__content {
+      position: relative;
+      z-index: 3;
+      color: white;
+      text-align: center;
+      top: 16%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+  }
+
+
+
+
+
+
+
+
+
 }
 
 @media (max-width: 480px) {
