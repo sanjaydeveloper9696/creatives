@@ -1,5 +1,14 @@
 /* Responsive Styles */
 @media (max-width: 768px) {
+
+
+  .container-width {
+width: auto !important;
+  
+  }
+
+
+
   header {
     flex-wrap: wrap;
     justify-content: center;
@@ -41,6 +50,11 @@
   .search {
     margin-top: 10px;
   }
+
+
+  .top-nav {
+    padding: 0px 15px !important;}
+
 }
 
 @media (max-width: 480px) {
@@ -62,6 +76,8 @@
   }
 
 
+
+
 }
 
 
@@ -70,7 +86,7 @@
 @media only screen and (max-width: 600px) {
 
   .viedeo-b {
-    margin-top: 35px;
+    margin-top: 0px;
 
   }
 
