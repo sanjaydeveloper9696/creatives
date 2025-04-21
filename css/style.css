@@ -302,7 +302,8 @@ span {
 }
 
 .btn1 {
-    background-color: #480fe9;
+    background-color: linear-gradient(to right, #ff416c, #ffaf3f);
+    box-shadow: 0 3px 10px rgba(255, 65, 108, 0.3);
     border: none;
     border-radius: 5px;
     font-size: 16px;
