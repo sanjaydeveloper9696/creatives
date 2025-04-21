@@ -2,6 +2,12 @@
 @media (max-width: 768px) {
 
 
+
+body {
+
+  padding: 10px;
+}
+
   .container-width {
 width: auto !important;
   
