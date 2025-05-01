@@ -1,61 +1,106 @@
-<style>
-.bg-video {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-.bg-video__media {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animated Header</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.bg-video__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  opacity: 0.5; /* adjust as needed */
-  z-index: 2;
-}
+    body {
+      font-family: Arial, sans-serif;
+    }
 
-.bg-video__content {
-  position: relative;
-  z-index: 3;
-  color: white;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-}
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #333;
+      color: white;
+      position: relative;
+    }
 
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
 
-</style>
+    nav {
+      display: flex;
+      gap: 20px;
+    }
 
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
 
+    nav a:hover {
+      color: #00bcd4;
+    }
 
-    <video class="bg-video__media" autoplay loop muted playsinline>
-      <source src="images/vodeo.mp4" type="video/mp4">
-      <!-- <source src="images/video.webm" type="video/webm"> -->
-    </video>
-  
-    <!-- Overlay layer -->
-    <div class="bg-video__overlay"></div>
-  
-    <!-- Foreground content -->
-    <div class="bg-video__content">
-      <h1>We Are Creative Digital Agency</h1>
-      <p>We Are Big Digital Agency</p>
-      <button id="toggle-video">Pause Video</button>
-    </div>
-  </section>
-  
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* Responsive Styles with Animation */
+    @media (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.4s ease-out;
+      }
+
+      nav.active {
+        max-height: 300px;
+        /* Adjust based on menu size */
+        transition: max-height 0.4s ease-in;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">MySite</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <nav id="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+
+</body>
+
+</html>
